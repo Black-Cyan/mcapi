@@ -36,14 +36,14 @@ def bedrock_status():
     ip = request.args.get("ip")
     port = int(request.args.get("port", 19132))
 
-    try_get_data(0, ip, port)
+    return try_get_data(0, ip, port)
 
 @app.route("/api/java/status", methods=["GET"])
 def java_status():
     ip = request.args.get("ip")
     port = int(request.args.get("port", 25565))
 
-    try_get_data(1, ip, port)
+    return try_get_data(1, ip, port)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
