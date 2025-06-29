@@ -10,27 +10,28 @@
 pip install flask flask-cors mcstatus
 ```
 
-## 使用方法
-### 克隆本仓库
+## 使用方法 / How to use
+### 克隆本仓库 / Clone this repository
 ```git
 git clone https://github.com/Black-Cyan/mcapi
 ```
 
-### 运行代码
+### 运行代码 / Run the code
 运行 `main.py` 文件来启动 Flask 应用：
 ```bash
 python main.py
 ```
 应用将在 `http://0.0.0.0:5000` 上启动。由于启用了跨域，配置了反向代理后使用其他端口也能访问后端代码。
 
-### 查询服务器状态
+### 查询服务器状态 / Search the status of a Minecraft Server
 发送 GET 请求到 `/api/${edition}/status` 端点，并提供服务器的 IP 地址和端口号（可选，Bedrock Edition 默认为 19132，Java Edition 默认为 25565）作为查询参数。例如：
 ```
 GET http://localhost/api/bedrock/status?ip=mc.example.com&port=19132
 ```
 
-#### 响应示例
-如果服务器在线，响应将包含服务器的详细信息：
+#### 响应示例 / Example response data
+如果服务器在线，响应将包含服务器的详细信息：  
+If the server is online, the response data would including details of the server: 
 ```json
 {
     "online": true,
@@ -42,7 +43,8 @@ GET http://localhost/api/bedrock/status?ip=mc.example.com&port=19132
     "motd": "Welcome to our server!"
 }
 ```
-如果服务器离线或出现错误，响应将包含错误信息：
+如果服务器离线或出现错误，响应将包含错误信息：  
+If the server is offline or there is something wrong with the server, the response data would including the error messages: 
 ```json
 {
     "online": false,
