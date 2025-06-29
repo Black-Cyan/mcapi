@@ -51,3 +51,6 @@ If the server is offline or there is something wrong with the server, the respon
     "error": "Timed out."
 }
 ```
+### 核心模块 / Core model - [mcstatus](https://github.com/py-mine/mcstatus)  
+如果可以的话，给这个模块的仓库点点 star 哦  
+if possible, pls give a star to the repository of the model
